@@ -1,0 +1,8 @@
+#geometry calculations with lanelet2
+lanenelt2 primitives interface with `Boost.Geometry`.Boost.Geometry offers almost
+all common geometry calculations and is very fast. One downside
+is that not all algorithms work well with normal Lanelet2 primitives.
+Another downside is that Boost.Geometry is compile-time heavy
+and thus not included in the normal lanelet2 headers.
+to use geometry calculations, include the respective geometry header.
+
