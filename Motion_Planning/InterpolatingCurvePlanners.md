@@ -40,3 +40,5 @@ sub-segment is called knot and they commonly
 possess a high degree of smoothness
 constraint at the joint
 between the pieces of hte spline.
+their approximation ability and the properties of their shape depend on the number of 
+B-spline basis functions used for defining them.
