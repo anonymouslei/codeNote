@@ -20,3 +20,16 @@
 $$ x' = f_i(s) = a_{i0} + a_{i1}s + a_{i2}s^2 +a_{i3}s^3 + a_{i4}s^4 + a_{i5}s^5 $$
 
 $$ y' = g_i(s) = b_{i0} + b_{i1}s + b_{i2}s^2 +b_{i3}s^3 + b_{i4}s^4 + b_{i5}s^5 $$
+
+Reference Line Smoother
+1. Objective Function
+1.1 Segment routing function
+segment routing path into n segments. each segment trajectory is defined by two polynomials
+1.2 define objective function of optimization for each segment
+for example: minial snap
+    ？不需要考虑和参考线的距离吗？
+1.3 convert  the cost function to QP formulation
+2. constraints
+2.1 Joint smoothness constraints
+    this constraint smoothes the spline joint. Let's assume two segments.
+
