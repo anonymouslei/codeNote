@@ -1,0 +1,62 @@
+## Typesetting your paper
+[reference](https://github.com/Wookai/paper-tips-and-tricks)
+### one sentence per line
+### capitalization
+
+we will refer below to two types of capitalization:
+
+- sentence format: The title of the nice book
+- title format: the Title of the Nice Book
+
+use title format for all section, subsection, etc. titles. 
+
+### tables
+[booktabs](https://www.ctan.org/pkg/booktabs) can help you produce clean and nice-looking tables.
+In general, avoid using vertical lines in your tables.
+Instead, if you want to group columns, do it in the headers using
+`\cmidrule`.
+you can also replace horizontal lines with spacing, using `addlinespace` 
+
+### number formatting
+Use the [siunitx](https://ctan.org/pkg/siunitx) package to format all numbers, currencies, units, etc:
+
+## mathematical notation
+
+when writing equations, it is helpful to have a coherent and
+consistent way of writing variables, vectors, matrices, etc.
+It helps the reader identifying what you are talking about and remembering the semantics of each symbol.
+
+### Notation
+we propose the following rules for writing math:
+- lowercase italic for variables:(`$x$`)
+- lowercase italic bold for vectors:(`$\mathbold{x}$`)
+- uppercase italic bold for matrices: (`$\mathbold{x}$`)
+- uppercase italic for random variables: (`$X$`)
+
+the `\mathbold` command comes from the `fixmath` package and is similar to `\boldmath` or `\bm`,
+except that all symbols are in italics, even greek letters(other packages do notitalicize greek letters)
+
+when adding indices or exponents to variables,
+make sure that you add them outside of the styling of the variable,
+i.e. write `$\mathbold{x}_i$` and not `$\mathbold{x_i}$`.
+
+#### define custom commands
+because we often refer to variables, we suggest defining the following two commands:
+```
+\renewcommand{\vec}[1]{\mathbold{#1}}
+\newcommand{\mat}[1]{\mathbold{#1}}
+``` 
+you can then use `$\vec{x}$` and `$\mat{X}$` in your document.
+if you decide to change the way you want to format matrices,
+you simply have to change the `\mat` command, and it will update
+the whole document. -- 没看懂这里
+
+we also suggest defining commands for the variables you use the most.
+for example, if you use `\vex{x}` and `\mat{x}` a lot, consider defining these command:
+```
+\newcommand{\vx}{\vec{x}}
+\newcommand{\vX}{\mat{X}}
+```
+#### use the correct notation for columns et elements
+note that you should always style the variables with respect to their type.
+For example, the $i$th element of 
